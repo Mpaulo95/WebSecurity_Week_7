@@ -6,7 +6,22 @@ Time Spend: TBA hours in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
+1. (Required) XSS Vulnerability in 4.2 comments (
+  - [ ] Summary: A Cross-Site Scripting vulnerability is found in WordPress Ver 4.2 when writing a comment 
+    - Vulnerability type: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
+  - [ ] GIF Walkthrough:
+  
+  - [ ] Steps to recreate:
+    1. Write a comment in wordpress by first writting "<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px" without quotes.
+    2. Then after that add on to the comment until the size of the comment is greater than 64kb.
+    3. After the comment is completed, post it and login to your admin account.
+    4. Once in the admin account open the comment section and approve the comment.
+    5. After that is done click on view post on the comment page and if everything worked a window saying hello world should appear.
+  - [ ] Affected source code:
+    - [Link 1](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-comments-post.php)
+2. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -15,7 +30,7 @@ Time Spend: TBA hours in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+3. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -24,7 +39,7 @@ Time Spend: TBA hours in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -33,16 +48,7 @@ Time Spend: TBA hours in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
+5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
