@@ -54,8 +54,8 @@ Time Spend: 5.5 hours in total
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
 
-GIFs created with [LiceCap](http://www.cockos.com/licecap/).
-wpscan on Kali Linux
+-GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+-wpscan on Kali Linux was used to find vulnerabilities.
 
 ## Notes
 
