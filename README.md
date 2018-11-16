@@ -1,8 +1,8 @@
 # WebSecurity Project Week 7- WordPress Pestering
 
-Time Spend: TBA hours in total
+Time Spend: 5.5 hours in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **At least three (Up to 5) vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
@@ -22,7 +22,7 @@ Time Spend: TBA hours in total
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-comments-post.php)
 2. (Required) XSS Vulnerability in 4.2 (When Replying as adminstrator)
-  - [ ] Summary: Can write Javascript code inside a link
+  - [ ] Summary: Can write Javascript code inside a link like yourlink.com/wp-admin/customize.php?theme=
     - Vulnerability types:XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.6
@@ -34,37 +34,20 @@ Time Spend: TBA hours in total
   3. View post to see message.
   - [ ] Affected source code:
     - [Link 2](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-admin/customize.php)
-3. (Required) Vulnerability Name or ID
-  - [ ] Summary: Can write Javascript code after a link
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+3. (Required) XSS vurnerability in the title page of creating a page
+  - [ ] Summary: Can write Javascript code in title of creating a page
+    - Vulnerability types:XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.4
   - [ ] GIF Walkthrough: 
+   ![](Vulnerability3.gif)
   - [ ] Steps to recreate: 
+  1. Go to create a page.
+  2. At the title page write  <a onmouseover=alert('XSS')> (Whatever title you like)
+  3. Then go to view page and you will see the an alert message when mouse hovers over page.
   - [ ] Affected source code:
-    - [Link 3](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-4. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-5. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+    - [Link 3](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/js/nav-menu.js)
 
-## Assets
-
-List any additional assets, such as scripts or files
 
 ## Resources
 
@@ -72,10 +55,11 @@ List any additional assets, such as scripts or files
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
 
 GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+wpscan on Kali Linux
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+The biggest challegenge with this assignment to me was setting up the software (Vagrant, Kali VM). It took a while for me to get confortable with the equipment. Something interesting to note with the first vulnerability is that it was hit and miss for me. It took me a while to manipulate the size of the comment to get it to work. As a result I had to edit the comment several times until it was the right size (Over 64 kb). The WPSCAN tool and its sources such as https://wpvulndb.com/vulnerabilities/ proved to be very helpful in finding the vulnerabilities. 
 
 ## License
 
