@@ -6,7 +6,7 @@ Time Spend: TBA hours in total
 
 ## Pentesting Report
 
-1. (Required) XSS Vulnerability in 4.2 comments (
+1. (Required) XSS Vulnerability in 4.2 comments 
   - [ ] Summary: A Cross-Site Scripting vulnerability is found in WordPress Ver 4.2 when writing a comment 
     - Vulnerability type: XSS
     - Tested in version: 4.2
@@ -21,24 +21,28 @@ Time Spend: TBA hours in total
     5. After that is done click on view post on the comment page and if everything worked a window saying hello world should appear.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-comments-post.php)
-2. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+2. (Required) XSS Vulnerability in 4.2 (When Replying as adminstrator)
+  - [ ] Summary: Can write Javascript code inside a link
+    - Vulnerability types:XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.6
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  ![](Vulnerability2.gif)
+  - [ ] Steps to recreate:
+  1. Login as an administrator.
+  2. Reply to a post with a reply like http://www.example.com/wp-admin/customize.php?theme=<svg onload=alert('XSS')>  
+  3. View post to see message.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 2](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-admin/customize.php)
 3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
+  - [ ] Summary: Can write Javascript code after a link
     - Vulnerability types:
     - Tested in version:
     - Fixed in version: 
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 3](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
